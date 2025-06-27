@@ -6,51 +6,117 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-OctoprintApi	KEYWORD1
+KlipperApi                 KEYWORD1
+PrinterStateFlags          KEYWORD1
+TemperatureData            KEYWORD1
+PrinterStatistics          KEYWORD1
+PrintJobInfo               KEYWORD1
+ServerInfo                 KEYWORD1
+MotionLimits               KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-sendRequestToOctoprint	KEYWORD2
-sendGetToOctoprint	KEYWORD2
-getPrinterStatistics	KEYWORD2
-getOctoprintVersion	KEYWORD2
-getPrintJob	KEYWORD2
-octoPrintGetPrinterBed	KEYWORD2
-sendPostToOctoPrint	KEYWORD2
-octoPrintConnectionDisconnect	KEYWORD2
-octoPrintConnectionAutoConnect	KEYWORD2
-octoPrintConnectionFakeAck	KEYWORD2
-octoPrintPrintHeadHome	KEYWORD2
-octoPrintPrintHeadRelativeJog	KEYWORD2
-octoPrintPrintHeadAbsoluteJog	KEYWORD2
-octoPrintPrintHeadJog	KEYWORD2
-octoPrintExtrude	KEYWORD2
-octoPrintSetBedTemperature	KEYWORD2
-octoPrintSetTool0Temperature	KEYWORD2
-octoPrintSetTool1Temperature	KEYWORD2
-octoPrintGetPrinterSD	KEYWORD2
-octoPrintPrinterSDInit	KEYWORD2
-octoPrintPrinterSDRefresh	KEYWORD2
-octoPrintPrinterSDRelease	KEYWORD2
-octoPrintJobStart	KEYWORD2
-octoPrintJobCancel	KEYWORD2
-octoPrintJobRestart	KEYWORD2
-octoPrintJobPauseResume	KEYWORD2
-octoPrintPrinterCommand	KEYWORD2
-octoPrintJobPause	KEYWORD2
-octoPrintJobResume	KEYWORD2
-octoPrintFileSelect	KEYWORD2
-octoPrintCoreShutdown	KEYWORD2
-octoPrintCoreReboot	KEYWORD2
-octoPrintCoreRestart	KEYWORD2
-init	KEYWORD2
+init                       KEYWORD2
+sendGetToMoonraker         KEYWORD2
+sendPostToMoonraker        KEYWORD2
+getMoonrakerEndpointResults KEYWORD2
+
+getPrinterInfo             KEYWORD2
+getPrinterStatistics       KEYWORD2
+getServerInfo              KEYWORD2
+getPrintJob                KEYWORD2
+
+startPrint                 KEYWORD2
+pausePrint                 KEYWORD2
+resumePrint                KEYWORD2
+cancelPrint                KEYWORD2
+
+setExtruderTemperature     KEYWORD2
+setBedTemperature          KEYWORD2
+setFanSpeed                KEYWORD2
+
+homeAll                    KEYWORD2
+homeAxis                   KEYWORD2
+moveRelative               KEYWORD2
+moveAbsolute               KEYWORD2
+
+sendGcode                  KEYWORD2
+sendGcodeMultiple          KEYWORD2
+
+emergencyStop              KEYWORD2
+restartFirmware            KEYWORD2
+restartHost                KEYWORD2
+
+getMotionLimits            KEYWORD2
 
 #######################################
-# Instances (KEYWORD2)
+# Structures and Properties (KEYWORD3)
 #######################################
+
+printerStats               KEYWORD3
+printJob                   KEYWORD3
+serverInfo                 KEYWORD3
+motionLimits               KEYWORD3
+
+state                      KEYWORD3
+stateFlags                 KEYWORD3
+extruder                   KEYWORD3
+extruder1                  KEYWORD3
+heatedBed                  KEYWORD3
+positionX                  KEYWORD3
+positionY                  KEYWORD3
+positionZ                  KEYWORD3
+positionE                  KEYWORD3
+speedFactor                KEYWORD3
+flowFactor                 KEYWORD3
+
+ready                      KEYWORD3
+error                      KEYWORD3
+paused                     KEYWORD3
+printing                   KEYWORD3
+standby                    KEYWORD3
+shutdown                   KEYWORD3
+startup                    KEYWORD3
+
+current                    KEYWORD3
+target                     KEYWORD3
+power                      KEYWORD3
+
+filename                   KEYWORD3
+progress                   KEYWORD3
+printTime                  KEYWORD3
+estimatedTime              KEYWORD3
+timeLeft                   KEYWORD3
+fileSize                   KEYWORD3
+printedBytes               KEYWORD3
+
+isPrinting                 KEYWORD3
+isPaused                   KEYWORD3
+isComplete                 KEYWORD3
+isCancelled                KEYWORD3
+hasError                   KEYWORD3
+
+klipperVersion             KEYWORD3
+moonrakerVersion           KEYWORD3
+hostname                   KEYWORD3
+port                       KEYWORD3
+
+hasExtruder                KEYWORD3
+hasExtruder1               KEYWORD3
+hasHeatedBed               KEYWORD3
+isHomed                    KEYWORD3
+
+httpStatusCode             KEYWORD3
+httpErrorBody              KEYWORD3
 
 #######################################
 # Constants (LITERAL1)
 #######################################
+
+KAPI_TIMEOUT               LITERAL1
+POSTDATA_SIZE              LITERAL1
+POSTDATA_GCODE_SIZE        LITERAL1
+JSONDOCUMENT_SIZE          LITERAL1
+USER_AGENT                 LITERAL1
